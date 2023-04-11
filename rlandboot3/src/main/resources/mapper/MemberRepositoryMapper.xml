@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.rland.web.repository.MemberRepository">
+	
+	<resultMap id="MemberResultMap" type="Member">	  
+	  <result property="id" column="id"/>
+	  <result property="userName" column="username"/>
+	  <result property="pwd" column="pwd"/>
+	  <result property="email" column="email"/>
+	  <result property="roleId" column="roleId"/>
+	</resultMap>
+
+	
+	<select id="finByUserName" resultMap="MemberResultMap">
+	select
+	id, username, pwd, email, roleId
+	from member
+	where
+	username = #{uid}
+	</select>
+	
+</mapper>
+
+
+
+
+
+

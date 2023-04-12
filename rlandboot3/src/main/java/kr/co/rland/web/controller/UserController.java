@@ -42,7 +42,7 @@ public class UserController {
 	}
 	
 	
-	@GetMapping("logout")
+	@RequestMapping("logout")
 	public String logout(HttpSession session) {
 		
 		session.invalidate();	

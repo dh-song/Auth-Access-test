@@ -32,9 +32,9 @@ public class MenuController {
 			HttpSession session
 			){
 		
-		if(session.getAttribute("isAuth") == null){
-			return "redirect:/user/login";
-		}
+//		if(session.getAttribute("isAuth") == null){
+//			return "redirect:/user/login";
+//		}
 		
 		List<MenuView> list = service.getViewList(page,categoryId, query);
 		model.addAttribute("list", list);

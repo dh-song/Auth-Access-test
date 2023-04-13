@@ -22,7 +22,7 @@ Vue
 					redirect: 'follow'
 				};
 
-				fetch("http://localhost:8080/menus", requestOptions)
+				fetch("http://localhost:8080/admin/menu/reg", requestOptions)
 					.then(response => response.text())
 					.then(result => {
 						if(result==="ok")
